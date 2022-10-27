@@ -13,8 +13,8 @@ var twoSum = function (nums, target) {
     const pair = target - curr;
 
     // check if the pair is in the map
-    // if it is return the indexes inside an array
-    // else add the curr number as a key and its index as its value
+    // if it is, return the indexes inside an array
+    // else, add the curr number as a key and its index as its value
     // that way we can return it later
     if (map[pair] !== undefined) {
       return [map[pair], i];
@@ -24,7 +24,10 @@ var twoSum = function (nums, target) {
   }
 };
 
-console.log(twoSum([2, 7, 11, 15], 9)); // [ 0, 1 ]
-console.log(twoSum([3, 2, 4], 6)); // [ 1, 2 ]
-console.log(twoSum([3, 3], 6)); // [ 0, 1 ]
-console.log(twoSum([1, 98, 7, 54, 2], 3)); // [ 0, 4 ]
+// Uncomment to step through with Node Debugger
+// console.log(twoSum([2, 7, 11, 15], 9)); // [ 0, 1 ]
+// console.log(twoSum([3, 2, 4], 6)); // [ 1, 2 ]
+// console.log(twoSum([3, 3], 6)); // [ 0, 1 ]
+// console.log(twoSum([1, 98, 7, 54, 2], 3)); // [ 0, 4 ]
+
+module.exports = twoSum;
