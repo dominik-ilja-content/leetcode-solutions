@@ -19,8 +19,8 @@ var sortedArrayToBST = function (nums) {
   return convert(0, nums.length - 1);
 };
 
-const space = "  ";
-console.log(JSON.stringify(sortedArrayToBST([3, 1]), null, space));
+// const space = "  ";
+// console.log(JSON.stringify(sortedArrayToBST([3, 1]), null, space));
 //   1
 // 3
 //
@@ -34,7 +34,7 @@ console.log(JSON.stringify(sortedArrayToBST([3, 1]), null, space));
 //   },
 //   "right": null
 // }
-console.log(JSON.stringify(sortedArrayToBST([0, 1, 2, 3, 4, 5]), null, space));
+// console.log(JSON.stringify(sortedArrayToBST([0, 1, 2, 3, 4, 5]), null, space));
 //       3
 //   1       5
 // 0   2   4
@@ -65,7 +65,7 @@ console.log(JSON.stringify(sortedArrayToBST([0, 1, 2, 3, 4, 5]), null, space));
 //     "right": null
 //   }
 // }
-console.log(JSON.stringify(sortedArrayToBST([-10, -3, 0, 5, 9]), null, space));
+// console.log(JSON.stringify(sortedArrayToBST([-10, -3, 0, 5, 9]), null, space));
 //       0
 //   -3    5
 // -10       9

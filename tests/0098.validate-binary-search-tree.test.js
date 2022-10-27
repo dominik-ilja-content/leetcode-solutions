@@ -1,4 +1,4 @@
-const isValidBST = require("../solutions-unfinished/0098.validate-binary-search-tree");
+const isValidBST = require("../solutions/0098.validate-binary-search-tree");
 const {
   createBinarySearchTree,
   createTree,

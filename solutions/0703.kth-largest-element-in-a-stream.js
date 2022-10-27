@@ -42,7 +42,8 @@ KthLargest.prototype.add = function (val) {
 /*
     Solution:
 
-
+    minHeap that we keep restricted to the "k" index that we want to follow.
+    If we go over the "k" amount we pop off the smallest item we have in our heap.
 */
 
 class MinBinaryHeap {
@@ -152,9 +153,9 @@ KthLargest.prototype.add = function (val) {
 
 const kthLargest = new KthLargest(3, [4, 5, 8, 2]);
 
-console.log(kthLargest); // { k: 3 minHeap._heap: [4,5,8] }
-console.log(kthLargest.add(3)); // 4
-console.log(kthLargest.add(5)); // 5
-console.log(kthLargest.add(10)); // 5
-console.log(kthLargest.add(9)); // 8
-console.log(kthLargest.add(4)); // 8
+// console.log(kthLargest); // { k: 3 minHeap._heap: [4,5,8] }
+// console.log(kthLargest.add(3)); // 4
+// console.log(kthLargest.add(5)); // 5
+// console.log(kthLargest.add(10)); // 5
+// console.log(kthLargest.add(9)); // 8
+// console.log(kthLargest.add(4)); // 8

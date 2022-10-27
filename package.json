@@ -6,10 +6,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test-watch": "jest --watch",
+    "test-watch-all": "jest --watch-all"
   },
   "jest": {
-    "setupFilesAfterEnv": ["jest-extended/all"]
+    "setupFilesAfterEnv": ["jest-extended/all"],
+    "modulePathIgnorePatterns": [".templates"]
   },
   "repository": {
     "type": "git",

@@ -20,14 +20,23 @@ node ./solutions/0001.two-sum.js
 
 **Running Tests**
 
-> TO BE ADDED
-
 ```bash
 # Individual Test
 
+## Syntax
+npm test -- /path/to/file
+
+## Example
+npm test -- ./tests/0001.two-sum.test.js
+
+## Watch Test
+npm run test-watch -- ./tests/0001.two-sum.test.js
 
 # All Tests
+npm test
 
+## Watch All Tests
+npm run test-watch-all
 ```
 
 ## Tips

@@ -32,9 +32,9 @@ var mergeTwoLists = function (list1, list2) {
   return head.next;
 };
 
-let list1 = createSinglyLinkedList([1, 2, 4]);
-let list2 = createSinglyLinkedList([1, 3, 4]);
-console.log(JSON.stringify(mergeTwoLists(list1, list2), null, "  "));
+// let list1 = createSinglyLinkedList([1, 2, 4]);
+// let list2 = createSinglyLinkedList([1, 3, 4]);
+// console.log(JSON.stringify(mergeTwoLists(list1, list2), null, "  "));
 // {
 //   "val": 1,
 //   "next": {
@@ -55,13 +55,13 @@ console.log(JSON.stringify(mergeTwoLists(list1, list2), null, "  "));
 //   }
 // }
 
-list1 = createSinglyLinkedList([]);
-list2 = createSinglyLinkedList([]);
-console.log(mergeTwoLists(list1, list2)); // null
+// list1 = createSinglyLinkedList([]);
+// list2 = createSinglyLinkedList([]);
+// console.log(mergeTwoLists(list1, list2)); // null
 
-list1 = createSinglyLinkedList([]);
-list2 = createSinglyLinkedList([0]);
-console.log(JSON.stringify(mergeTwoLists(list1, list2), null, "  "));
+// list1 = createSinglyLinkedList([]);
+// list2 = createSinglyLinkedList([0]);
+// console.log(JSON.stringify(mergeTwoLists(list1, list2), null, "  "));
 // {
 //   "val": 0,
 //   "next": null

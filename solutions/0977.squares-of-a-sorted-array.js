@@ -26,5 +26,5 @@ var sortedSquares = function (nums) {
   return squares;
 };
 
-console.log(sortedSquares([100, 200, 10, 4, -2])); // [ 4, 16, 100, 40000, 10000 ]
-console.log(sortedSquares([-200, -100, 5, 91, 99])); // [ 25, 8281, 9801, 10000, 40000 ]
+// console.log(sortedSquares([100, 200, 10, 4, -2])); // [ 4, 16, 100, 40000, 10000 ]
+// console.log(sortedSquares([-200, -100, 5, 91, 99])); // [ 25, 8281, 9801, 10000, 40000 ]

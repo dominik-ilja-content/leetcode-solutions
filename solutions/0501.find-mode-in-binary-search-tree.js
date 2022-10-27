@@ -1,7 +1,4 @@
-const {
-  TreeNode,
-  createBinarySearchTree,
-} = require("../data-structures/Trees");
+const { TreeNode, createTree } = require("../data-structures/Trees");
 
 // SOLUTION using Hash Map
 /**
@@ -72,25 +69,11 @@ var findMode = function (root) {
   return result;
 };
 
-// Since trees contain duplicates I just made them by hand
+// let tree = createTree([1, null, 2, 2, null]);
+// console.log(findMode(tree)); // [ 2 ]
 
-let tree = new TreeNode(1, null, new TreeNode(2, new TreeNode(2), null));
-console.log(findMode(tree)); // [ 2 ]
+// tree = createTree([1, null, 2]);
+// console.log(findMode(tree)); // [ 1, 2 ]
 
-tree = new TreeNode(1, null, new TreeNode(2, null, null));
-console.log(findMode(tree)); // [ 1, 2 ]
-
-tree = new TreeNode(
-  50,
-  new TreeNode(
-    33,
-    new TreeNode(22, new TreeNode(18), new TreeNode(25)),
-    new TreeNode(33, new TreeNode(33), new TreeNode(37))
-  ),
-  new TreeNode(
-    63,
-    new TreeNode(63, new TreeNode(59), new TreeNode(63)),
-    new TreeNode(72, new TreeNode(64), new TreeNode(79))
-  )
-);
-console.log(findMode(tree)); // [ 33, 63 ]
+// tree = createTree([50, 33, 63, 22, 33, 63, 72, 18, 25, 33, 37, 59, 63, 64, 79]);
+// console.log(findMode(tree)); // [ 33, 63 ]

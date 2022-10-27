@@ -4,14 +4,6 @@ const {
 } = require("../data-structures/Trees");
 
 /**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
  * @param {TreeNode} root
  * @param {number} low
  * @param {number} high
@@ -57,27 +49,27 @@ var rangeSumBST = function (root, low, high) {
   return sum;
 };
 
-const space = "  ";
-console.log(
-  JSON.stringify(
-    rangeSumBST(createBinarySearchTree([10, 5, 15, 3, 7, 18]), 7, 15),
-    null,
-    space
-  )
-); // 32
+// const space = "  ";
+// console.log(
+//   JSON.stringify(
+//     rangeSumBST(createBinarySearchTree([10, 5, 15, 3, 7, 18]), 7, 15),
+//     null,
+//     space
+//   )
+// ); // 32
 
-console.log(
-  JSON.stringify(
-    rangeSumBST(createBinarySearchTree([10, 5, 15, 3, 7, 13, 18, 1, 6]), 6, 10),
-    null,
-    space
-  )
-); // 23
+// console.log(
+//   JSON.stringify(
+//     rangeSumBST(createBinarySearchTree([10, 5, 15, 3, 7, 13, 18, 1, 6]), 6, 10),
+//     null,
+//     space
+//   )
+// ); // 23
 
-console.log(
-  JSON.stringify(
-    rangeSumBST(createBinarySearchTree([22, 3, 9, 72, 45, 7, 11]), 4, 37),
-    null,
-    space
-  )
-); // 49
+// console.log(
+//   JSON.stringify(
+//     rangeSumBST(createBinarySearchTree([22, 3, 9, 72, 45, 7, 11]), 4, 37),
+//     null,
+//     space
+//   )
+// ); // 49
