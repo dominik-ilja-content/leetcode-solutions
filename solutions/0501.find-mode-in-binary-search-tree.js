@@ -1,7 +1,7 @@
 const {
   TreeNode,
   createBinarySearchTree,
-} = require("../data-structures/BinarySearchTree");
+} = require("../data-structures/Trees");
 
 // SOLUTION using Hash Map
 /**

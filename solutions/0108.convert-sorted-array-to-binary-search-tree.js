@@ -1,4 +1,4 @@
-const { TreeNode } = require("../data-structures/BinarySearchTree");
+const { TreeNode } = require("../data-structures/Trees");
 
 /**
  * @param {number[]} nums

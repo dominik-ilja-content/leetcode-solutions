@@ -11,6 +11,55 @@ function TreeNode(val, left, right) {
   this.right = right === undefined ? null : right;
 }
 
+function createTree(arr) {
+  let tree = null;
+  let nullNodes = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    const el = arr[i];
+
+    if (el === null) {
+      nullNodes += 1;
+      continue;
+    }
+
+    if (tree === null) {
+      tree = new TreeNode(el);
+    } else {
+      let skips = nullNodes;
+      const queue = [tree];
+
+      while (queue.length > 0) {
+        const node = queue.shift();
+
+        if (node === null) continue;
+
+        if (node.left === null) {
+          if (skips === 0) {
+            node.left = new TreeNode(el);
+            break;
+          }
+
+          skips -= 1;
+        }
+        if (node.right === null) {
+          if (skips === 0) {
+            node.right = new TreeNode(el);
+            break;
+          }
+
+          skips -= 1;
+        }
+
+        queue.push(node.left);
+        queue.push(node.right);
+      }
+    }
+  }
+
+  return tree;
+}
+
 class BinarySearchTree {
   constructor() {
     this.root = null;
@@ -77,6 +126,7 @@ function createBinarySearchTree(arr) {
 }
 
 module.exports = {
-  TreeNode,
   createBinarySearchTree,
+  createTree,
+  TreeNode,
 };
