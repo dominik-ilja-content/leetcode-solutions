@@ -7,12 +7,16 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "test-watch": "jest --watch",
-    "test-watch-all": "jest --watch-all"
+    "test-watch": "jest --watch --verbose",
+    "test-watch-all": "jest --watch-all --verbose"
   },
   "jest": {
-    "setupFilesAfterEnv": ["jest-extended/all"],
-    "modulePathIgnorePatterns": [".templates"]
+    "setupFilesAfterEnv": [
+      "jest-extended/all"
+    ],
+    "modulePathIgnorePatterns": [
+      ".templates"
+    ]
   },
   "repository": {
     "type": "git",
