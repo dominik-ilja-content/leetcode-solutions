@@ -1,5 +1,5 @@
-const isSymmetric = require("../solutions/0101-symmetric-tree");
-const { createTree } = require("../data-structures/Trees");
+const isSymmetric = require("./symmetric-tree");
+const { createTree } = require("../../data-structures/Trees");
 
 describe("tests for leetcode 101 - symmetric tree", () => {
   test("should work for a tree that is only a root", () => {
