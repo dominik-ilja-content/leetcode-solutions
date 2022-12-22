@@ -56,14 +56,4 @@ var merge = function (nums1, m, nums2, n) {
   }
 };
 
-// let nums1 = [1, 2, 3, 0, 0, 0];
-// merge(nums1, 3, [2, 5, 6], 3);
-// console.log(nums1); // [1, 2, 2, 3, 5, 6]
-
-// nums1 = [1];
-// merge(nums1, 0, [1], 1);
-// console.log(nums1); // [1]
-
-// nums1 = [0];
-// merge(nums1, 0, [1], 1);
-// console.log(nums1); // [1]
+module.exports = merge;
