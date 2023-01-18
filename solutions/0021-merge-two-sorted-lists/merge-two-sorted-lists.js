@@ -1,4 +1,4 @@
-const { ListNode } = require("../../data-structures/LinkedList");
+const { ListNode } = require("../../data_structures/LinkedList");
 
 /**
  * @param {ListNode} list1

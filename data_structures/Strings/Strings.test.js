@@ -1,4 +1,4 @@
-const generateRandomString = require("../data-structures/Strings");
+const generateRandomString = require("./Strings");
 
 const a_CHAR_CODE = "a".charCodeAt(0);
 const z_CHAR_CODE = "z".charCodeAt(0);

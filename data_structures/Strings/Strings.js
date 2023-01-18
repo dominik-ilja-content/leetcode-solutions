@@ -1,4 +1,4 @@
-import { generateRandomNumber } from "./Helpers";
+import { generateRandomNumber } from "../Helpers";
 
 /**
  * @param {number} length

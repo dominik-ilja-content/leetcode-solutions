@@ -1,6 +1,10 @@
-const { TreeNode, createTree } = require("../data-structures/Trees");
+const {
+  TreeNode,
+  createBinaryTree,
+} = require("../../data_structures/Trees/Trees");
 
-// SOLUTION using Hash Map
+/* SOLUTION 1 - Hash Map */
+
 /**
  * @param {TreeNode} root
  * @return {number[]}
@@ -39,8 +43,12 @@ var findMode = function (root) {
   return result;
 };
 
-// SOLUTION using In Order Depth First Search
+/* SOLUTION 2 - In Order Depth First Search */
 
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
 var findMode = function (root) {
   let result = [];
   let prev = root;
@@ -69,11 +77,4 @@ var findMode = function (root) {
   return result;
 };
 
-// let tree = createTree([1, null, 2, 2, null]);
-// console.log(findMode(tree)); // [ 2 ]
-
-// tree = createTree([1, null, 2]);
-// console.log(findMode(tree)); // [ 1, 2 ]
-
-// tree = createTree([50, 33, 63, 22, 33, 63, 72, 18, 25, 33, 37, 59, 63, 64, 79]);
-// console.log(findMode(tree)); // [ 33, 63 ]
+module.exports = findMode;

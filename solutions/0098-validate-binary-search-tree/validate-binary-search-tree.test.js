@@ -1,9 +1,9 @@
 const {
   TreeNode,
   createBinarySearchTree,
-  createTree,
-} = require("../../data-structures/Trees");
-const { generateShuffledArray } = require("../../data-structures/Helpers");
+  createBinaryTree,
+} = require("../../data_structures/Trees/Trees");
+const { generateShuffledArray } = require("../../data_structures/Helpers");
 
 const isValidBST = require("./validate-binary-search-tree");
 
@@ -15,7 +15,7 @@ describe("tests for leetcode 98 - validate binary search tree", () => {
     expect(result).toBe(expected);
   });
   test("should return correct result for three nodes", () => {
-    const invalidTree = createTree([2, 3, 1]);
+    const invalidTree = createBinaryTree([2, 3, 1]);
     let result = isValidBST(invalidTree);
     let expected = false;
     expect(result).toBe(expected);
@@ -26,7 +26,7 @@ describe("tests for leetcode 98 - validate binary search tree", () => {
     expect(result).toBe(expected);
   });
   test("should return correct result for seven nodes", () => {
-    const invalidTree = createTree([5, 1, 4, null, null, 3, 6]);
+    const invalidTree = createBinaryTree([5, 1, 4, null, null, 3, 6]);
     let result = isValidBST(invalidTree);
     let expected = false;
     expect(result).toBe(expected);
@@ -37,7 +37,7 @@ describe("tests for leetcode 98 - validate binary search tree", () => {
     expect(result).toBe(expected);
   });
   test("should return correct result for 10,000 nodes", () => {
-    const invalidTree = createTree(Array(10000).fill(1));
+    const invalidTree = createBinaryTree(Array(10000).fill(1));
     let result = isValidBST(invalidTree);
     let expected = false;
     expect(result).toBe(expected);
