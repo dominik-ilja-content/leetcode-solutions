@@ -1,4 +1,4 @@
-const { createTree, TreeNode: TN } = require("../data-structures/Trees");
+const { createTree, TreeNode: TN } = require("./Trees");
 
 describe("Tests for createTree function", () => {
   test("Returns null if an empty array is passed", () => {

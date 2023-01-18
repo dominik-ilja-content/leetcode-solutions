@@ -2,7 +2,7 @@ const {
   TreeNode,
   createTree,
   createBinarySearchTree,
-} = require("../../data-structures/Trees");
+} = require("../../data_structures/Trees");
 
 /**
  * Definition for a binary tree node.

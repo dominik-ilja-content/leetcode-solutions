@@ -2,8 +2,8 @@ const {
   TreeNode,
   createBinarySearchTree,
   createTree,
-} = require("../../data-structures/Trees");
-const { generateShuffledArray } = require("../../data-structures/Helpers");
+} = require("../../data_structures/Trees");
+const { generateShuffledArray } = require("../../data_structures/Helpers");
 
 const isValidBST = require("./validate-binary-search-tree");
 

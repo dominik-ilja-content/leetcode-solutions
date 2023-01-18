@@ -1,5 +1,5 @@
 const mergeTwoLists = require("./merge-two-sorted-lists");
-const { createSinglyLinkedList } = require("../../data-structures/LinkedList");
+const { createSinglyLinkedList } = require("../../data_structures/LinkedList");
 
 describe("tests for leetcode 21 - merge two lists", () => {
   test("should return null when both lists are empty", () => {

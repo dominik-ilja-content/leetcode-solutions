@@ -2,8 +2,8 @@ const {
   TreeNode,
   createBinarySearchTree,
   createTree,
-} = require("../../data-structures/Trees");
-const { generateSortedItemArray } = require("../../data-structures/Helpers");
+} = require("../../data_structures/Trees");
+const { generateSortedItemArray } = require("../../data_structures/Helpers");
 
 const sortedArrayToBST = require("./convert-sorted-array-to-binary-search-tree");
 

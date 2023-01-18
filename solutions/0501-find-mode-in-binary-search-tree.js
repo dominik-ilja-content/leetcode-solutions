@@ -1,4 +1,4 @@
-const { TreeNode, createTree } = require("../data-structures/Trees");
+const { TreeNode, createTree } = require("../data_structures/Trees");
 
 // SOLUTION using Hash Map
 /**

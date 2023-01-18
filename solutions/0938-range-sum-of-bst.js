@@ -1,7 +1,7 @@
 const {
   TreeNode,
   createBinarySearchTree,
-} = require("../data-structures/Trees");
+} = require("../data_structures/Trees");
 
 /**
  * @param {TreeNode} root
