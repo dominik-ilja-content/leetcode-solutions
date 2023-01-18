@@ -1,4 +1,4 @@
-const myAtoi = require("./string-to-integer-aoti");
+const myAtoi = require("./string-to-integer-atoi");
 
 describe("Tests for Leetcode 8 String to Integer (aoti)", () => {
   it("should return zero if empty string is passed", () => {

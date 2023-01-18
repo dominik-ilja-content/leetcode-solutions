@@ -11,53 +11,57 @@ function TreeNode(val, left, right) {
   this.right = right === undefined ? null : right;
 }
 
-function createTree(arr) {
-  let tree = null;
-  let nullNodes = 0;
+function createBinaryTree(arr) {
+  let root = null;
+  let nodesToSkip = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    const el = arr[i];
-
+  for (const el of arr) {
     if (el === null) {
-      nullNodes += 1;
+      nodesToSkip += 1;
       continue;
     }
 
-    if (tree === null) {
-      tree = new TreeNode(el);
+    const node = new TreeNode(el);
+
+    if (root === null) {
+      if (nodesToSkip > 0) {
+        break;
+      } else {
+        root = node;
+      }
     } else {
-      let skips = nullNodes;
-      const queue = [tree];
+      const queue = [root];
+      let skips = nodesToSkip;
 
       while (queue.length > 0) {
-        const node = queue.shift();
+        const currentNode = queue.shift();
 
-        if (node === null) continue;
+        if (currentNode === null) continue;
 
-        if (node.left === null) {
+        if (currentNode.left === null) {
           if (skips === 0) {
-            node.left = new TreeNode(el);
+            currentNode.left = node;
             break;
           }
 
           skips -= 1;
         }
-        if (node.right === null) {
+        if (currentNode.right === null) {
           if (skips === 0) {
-            node.right = new TreeNode(el);
+            currentNode.right = node;
             break;
           }
 
           skips -= 1;
         }
 
-        queue.push(node.left);
-        queue.push(node.right);
+        queue.push(currentNode.left);
+        queue.push(currentNode.right);
       }
     }
   }
 
-  return tree;
+  return root;
 }
 
 class BinarySearchTree {
@@ -127,6 +131,6 @@ function createBinarySearchTree(arr) {
 
 module.exports = {
   createBinarySearchTree,
-  createTree,
+  createBinaryTree,
   TreeNode,
 };

@@ -1,4 +1,4 @@
-const { TreeNode } = require("../../data_structures/Trees");
+const { TreeNode } = require("../../data_structures/Trees/Trees");
 
 /**
  * @param {number[]} nums
