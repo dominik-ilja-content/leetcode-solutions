@@ -31,22 +31,24 @@ function generateRandomNumber(
 
 /**
  * Shuffles array in place.
- * @param {Array} a items An array containing the items.
+ * @param {Array[]} arr items An array containing the items.
+ * @returns {Array[]} passed array with shuffled values
  */
-function shuffle(a) {
+function shuffle(arr) {
   var j, x, i;
-  for (i = a.length - 1; i > 0; i--) {
+  for (i = arr.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1));
-    x = a[i];
-    a[i] = a[j];
-    a[j] = x;
+    x = arr[i];
+    arr[i] = arr[j];
+    arr[j] = x;
   }
-  return a;
+  return arr;
 }
 
 /**
  * @param {number} amount items to create
  * @param {boolean} asc If items should be in ascending order or not
+ * @returns {number[]}
  */
 
 function generateSortedItemArray(amount, asc = true) {
@@ -60,14 +62,43 @@ function generateSortedItemArray(amount, asc = true) {
 }
 
 /**
+ * @desc Generates a number array with values shuffled
  * @param {number} amount items to create
+ * @returns {number[]}
  */
 
 function generateShuffledArray(amount) {
   return shuffle(generateSortedItemArray(amount));
 }
 
+/**
+ * @desc Generates a number and null array where each index alternates between
+ *       number and null. This is used to create deep lopsided trees.
+ * @param {number} amount items to create
+ * @return {[number|null]}
+ */
+
+function generateAlternatingArray(amount) {
+  const arr = [];
+  let count = 0;
+  let el = null;
+
+  for (let i = 0; i < amount; i++) {
+    if (el === null) {
+      el = count;
+      count += 1;
+    } else {
+      el = null;
+    }
+
+    arr.push(el);
+  }
+
+  return arr;
+}
+
 module.exports = {
+  generateAlternatingArray,
   generateRandomNumber,
   generateShuffledArray,
   generateSortedItemArray,
