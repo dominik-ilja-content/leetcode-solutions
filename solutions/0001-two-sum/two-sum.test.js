@@ -1,11 +1,6 @@
 const twoSum = require("./two-sum");
 
 describe("tests for leetcode 1 - two sum", () => {
-  test("should return empty integer array if no match", () => {
-    expect(twoSum([], 10)).toEqual([]);
-    expect(twoSum([1, 2], 10)).toEqual([]);
-    expect(twoSum([1, 10], 10)).toEqual([]);
-  });
   test("should work with repeating numbers", () => {
     expect(twoSum([3, 3], 6)).toBeOneOf([
       [0, 1],

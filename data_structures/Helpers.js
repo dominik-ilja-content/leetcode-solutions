@@ -1,7 +1,23 @@
 const util = require("util");
+const fs = require("fs");
 
 function printObj(obj) {
   console.log(util.inspect(obj, { depth: null, colors: true, compact: false }));
+}
+
+/**
+ * @desc Writes data to a file
+ * @param {string} path path to the file to be written to
+ * @param {any} data data that will be written to file
+ */
+function writeToFile(path, data) {
+  try {
+    console.log({ path, data });
+    fs.writeFileSync(path, JSON.stringify(data));
+    console.log("Data written to file!");
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 /**
@@ -55,7 +71,7 @@ function generateSortedItemArray(amount, asc = true) {
   const result = [];
 
   for (let i = 0; i < amount; i++) {
-    result.push(i);
+    result.push(i + 1);
   }
 
   return result;
@@ -97,10 +113,45 @@ function generateAlternatingArray(amount) {
   return arr;
 }
 
+/**
+ * @desc Generates a matrix with random values between 1 & the col amount (inclusive)
+ * @param {number} rows number of rows to generate
+ * @param {number} cols number of cols to generate
+ * @return {[[number]]|[[]]}
+ */
+
+function generateRandomMatrix(rows, cols) {
+  if (rows < 1 || cols < 1) return [[]];
+
+  const matrix = [];
+
+  for (let rowIdx = 0; rowIdx < rows; rowIdx++) {
+    matrix.push(generateShuffledArray(cols));
+  }
+
+  return matrix;
+}
+
+function generateArrayOfRandomNumbersInRange(indexes, smallest, largest) {
+  let nums = [];
+  for (let i = 0; i < indexes; i++) {
+    const randomNumber = generateRandomNumber(smallest, largest, {
+      round: true,
+      place: 0,
+    });
+    nums.push(randomNumber);
+  }
+  return nums;
+}
+
 module.exports = {
+  generateArrayOfRandomNumbersInRange,
   generateAlternatingArray,
   generateRandomNumber,
   generateShuffledArray,
   generateSortedItemArray,
+  generateRandomMatrix,
   printObj,
+  shuffle,
+  writeToFile,
 };
