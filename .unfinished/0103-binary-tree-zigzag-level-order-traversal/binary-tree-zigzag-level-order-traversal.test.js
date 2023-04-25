@@ -23,10 +23,10 @@ describe("tests for leecode 103 - binary tree zigzag level order traversal", () 
     });
   });
 
-  it("", () => {
-    let setup = null;
-    let expected = null;
-    let result = null;
-    expect(result).toBe(expected);
-  });
+  // it("", () => {
+  //   let setup = null;
+  //   let expected = null;
+  //   let result = null;
+  //   expect(result).toBe(expected);
+  // });
 });
