@@ -4,7 +4,7 @@
  * @return {string}
  */
 var convert = function (s, num_rows) {
-  if (num_rows <= 1 || s.length < num_rows) return s;
+  if (num_rows === 1 || s.length < num_rows) return s;
 
   const rows = Array(num_rows).fill("");
 
@@ -13,8 +13,7 @@ var convert = function (s, num_rows) {
 
     if (reverse && row_idx === 0) {
       reverse = false;
-    }
-    if (!reverse && row_idx === num_rows - 1) {
+    } else if (!reverse && row_idx === num_rows - 1) {
       reverse = true;
     }
 

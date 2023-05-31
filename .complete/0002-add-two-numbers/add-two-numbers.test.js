@@ -1,7 +1,5 @@
 const addTwoNumbers = require("./add-two-numbers");
-const {
-  createSinglyLinkedList,
-} = require("../../../data_structures/LinkedList");
+const { createSinglyLinkedList } = require("../../data_structures/LinkedList");
 
 /*
     The number of nodes in each linked list is in the range [1, 100].

@@ -1,7 +1,6 @@
 const { TreeNode, createBinaryTree } = require("../../data_structures/Trees");
 
 /* RECURSIVE SOLUTION */
-
 /**
  * @param {TreeNode} p
  * @param {TreeNode} q
@@ -16,7 +15,6 @@ var isSameTree = function (p, q) {
 };
 
 /* ITERATIVE SOLUTION */
-
 /**
  * @param {TreeNode} p
  * @param {TreeNode} q
