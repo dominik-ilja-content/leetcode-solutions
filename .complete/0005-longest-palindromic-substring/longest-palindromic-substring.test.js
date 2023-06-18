@@ -8,5 +8,11 @@ describe("tests for leecode 5 - longest palindromic substring", () => {
       let result = longestPalindrome(s);
       expect(result).toBeOneOf(expected);
     });
+    it("should return 'bb' for 'cbbd'", () => {
+      let s = "cbbd";
+      let expected = "bb";
+      let result = longestPalindrome(s);
+      expect(result).toBe(expected);
+    });
   });
 });
