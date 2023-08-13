@@ -1,35 +1,35 @@
-const _ = require("./");
-const {} = require("../../data_structures/");
+const cancellable = require("./execute-cancellable-function-with-delay");
 
-describe("tests for leecode 0000 - name", () => {
+describe("tests for leecode 2715 - execute cancellable function with delay", () => {
   describe("should return correct result for different inputs", () => {
-    it("", () => {
-      const result = [];
-      const fn = (x) => x * 5;
-      const args = [2],
-        t = 20,
-        cancelT = 50;
-      const log = (...argsArr) => {
-        result.push(fn(...argsArr));
+    it("", async () => {
+      let logs = [];
+      let args = [2];
+      let time = 20;
+      let cancelTime = 50;
+      let fn = (x) => x * 5;
+      let log = (...args) => {
+        logs.push(fn(...args));
       };
-      const cancel = cancellable(fn, args, t);
+      let cancel = cancellable(log, args, time);
+      let expected = [10];
 
-      setTimeout(() => {
-        cancel();
-        // console.log(result); // [{"time":20,"returned":10}]
-      }, cancelT);
+      /* 
+          how do we need to do this?
+          we need to wait for the setTimeout to finish
+          then see if logs matches expected
+      */
 
-      let setup = null;
-      let expected = null;
-      // let result = null;
-      expect(result).toBe(expected);
+
+
+      // const prom = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     cancel();
+      //     resolve(output);
+      //   }, cancelT);
+      // });
+      // await prom;
+      expect(result).toEqual(expected);
     });
-  });
-
-  it("", () => {
-    let setup = null;
-    let expected = null;
-    let result = null;
-    expect(result).toBe(expected);
   });
 });

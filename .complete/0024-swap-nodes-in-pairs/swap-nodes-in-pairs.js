@@ -1,8 +1,6 @@
-const { printObj } = require("../0000-helpers/utils");
 const {
-  createSinglyLinkedList,
   ListNode,
-} = require("../0000-helpers/LinkedList");
+} = require("../../data_structures/LinkedList");
 
 /**
  * @param {ListNode} head
@@ -74,37 +72,5 @@ var swapPairs = function (head) {
 
   return result;
 };
-
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var swapPairs = function (head) {
-  // base case: At the end of the list
-  if (head === null || head.next === null) {
-    return head;
-  }
-
-  /*
-      1. Save the head's child because its reference will be overwritten.
-      Without the reference we won't be able to swap.
-
-      2. Overwrite the child with the result of the recursive call
-
-      3. Complete the swap by having the child's next point to its original parent.
-
-      4. Return child because it is now the parent head.
-    */
-  const child = head.next; // 1
-  head.next = swapPairs(head.next.next); // 2
-  child.next = head; // 3
-
-  return child; // 4
-};
-
-printObj(swapPairs(createSinglyLinkedList([1, 2])));
-printObj(swapPairs(createSinglyLinkedList([1, 2, 3])));
-printObj(swapPairs(createSinglyLinkedList([1, 2, 3, 4])));
-printObj(swapPairs(createSinglyLinkedList([1, 2, 3, 4, 5])));
 
 module.exports = swapPairs;
